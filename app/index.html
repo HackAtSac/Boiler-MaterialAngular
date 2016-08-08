@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/" />
+
+  <!--<link rel="stylesheet" href="res/bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="res/bower_components/html5-boilerplate/dist/css/main.css">-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- For different coloring, get a different color code from https://getmdl.io/customize/index.html -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-light_blue.min.css" />
+
+  <link rel="stylesheet" href="res/app.css">
+
+  <script src="res/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+</head>
+<body>
+
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="/">Root</a>
+        <a class="mdl-navigation__link" href="/view1">View1</a>
+        <a class="mdl-navigation__link" href="/view2">View2</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/">Root</a>
+      <a class="mdl-navigation__link" href="/view1">View1</a>
+      <a class="mdl-navigation__link" href="/view2">View2</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+
+    <div class="page-content">
+      <!--[if lt IE 7]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <!-- Your content goes here -->
+      <div ng-view></div>
+
+      <div>Angular seed app: v<span app-version></span></div>
+    </div>
+
+  </main>
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">Title</div>
+      <ul class="mdl-mini-footer__link-list">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy & Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="res/bower_components/angular/angular.js"></script>
+  <script src="res/bower_components/angular-route/angular-route.js"></script>
+
+  <script src="res/app.js"></script>
+  <script src="res/root/root.js"></script>
+  <script src="res/view1/view1.js"></script>
+  <script src="res/view2/view2.js"></script>
+
+  <script src="res/components/version/version.js"></script>
+  <script src="res/components/version/version-directive.js"></script>
+  <script src="res/components/version/interpolate-filter.js"></script>
+</body>
+</html>
